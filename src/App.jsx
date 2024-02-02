@@ -1,9 +1,28 @@
+import {createContext, useState} from "react";
+import RightSide from "./components/RightSide";
+import SideBar from "./components/SideBar";
+
+export const StepContext = createContext(null);
+
 function App() {
+    const [step, setStep] = useState(1);
+    const [info, setInfo] = useState({
+        billing: "",
+        name: "",
+        email: "",
+        phone: "",
+        plan: "",
+        pName: "",
+        addons: [],
+    });
+    const [billing, setBilling] = useState("monthly");
     return (
-        <>
-            <h1>test</h1>
-            <h2>test2</h2>
-        </>
+        <StepContext.Provider value={{ step, setStep, info, setInfo, billing, setBilling }}>
+            <div className="wrapper">
+                <SideBar setStep={setStep} />
+                <RightSide step={step} />
+            </div>
+        </StepContext.Provider>
     );
 }
 
