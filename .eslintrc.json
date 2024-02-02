@@ -17,6 +17,11 @@
     "react/jsx-indent": ["error", 4],
     "react/prop-types": "off",
     "react/jsx-indent-props":  "off",
-    "react/jsx-no-constructed-context-values": "off"
+    "react/jsx-no-constructed-context-values": "off",
+    "object-curly-newline": "off",
+    "react/jsx-no-bind": "off",
+    "jsx-a11y/label-has-associated-control": [2, {
+      "controlComponents" : ["Switch"]
+    }]
   }
 }

@@ -1,7 +1,7 @@
 import BackButton from "./BackButton";
 import NextButton from "./NextButton";
-import React, {useContext, useEffect, useRef} from "react";
-import {StepContext} from "../App";
+import React, { useContext, useEffect, useRef } from "react";
+import { StepContext } from "../App";
 
 export default function AddOns() {
     const { info } = useContext(StepContext);
@@ -88,10 +88,10 @@ function AddOn({ header, desc, price, addOnID, text }) {
         }
     });
     return (
-        <div className={`${className}`} onClick={() => handleClick(header, price)} ref={divRef}>
+        <button type="button" className={`${className}`} onClick={() => handleClick(header, price)} ref={divRef}>
             <div className="step3-addon-right">
-                <input type="checkbox" ref={checkBoxRef} />
-                <div>
+                <input type="checkbox" ref={checkBoxRef} style={{ cursor: "pointer" }} />
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                     <h2>{header}</h2>
                     <p>{desc}</p>
                 </div>
@@ -101,6 +101,6 @@ function AddOn({ header, desc, price, addOnID, text }) {
                 {price}
                 {text}
             </p>
-        </div>
+        </button>
     );
 }
