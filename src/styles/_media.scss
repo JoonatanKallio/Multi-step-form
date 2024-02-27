@@ -1,1 +1,144 @@
 @import "./_config.scss";
+
+@media (max-width: 1000px) {
+  #root {
+    align-items: flex-start;
+  }
+  .button-wrapper {
+    width: 90%;
+    height: 70px;
+  }
+  .wrapper {
+    height: fit-content;
+    flex-direction: column;
+    width: 80vw;
+    z-index: 0;
+    padding: 0;
+    .sidebar {
+      top: 0;
+      position: absolute;
+      width: 80vw;
+      height: 20vh;
+      z-index: -1;
+      .sidebarImage {
+        width: 100%;
+      }
+      .sidebar-button-wrapper {
+        width: 100%;
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0;
+        top: 0;
+        left: 0;
+        .sidebar-button {
+          width: fit-content;
+          gap: 0;
+          .number {
+            border-radius: 80px;
+            padding: 10px;
+            width: 25px;
+            height: 25px;
+          }
+          .sidebar-text {
+            display: none;
+          }
+        }
+      }
+    }
+    .step1 {
+      position: relative;
+      width: 90%;
+      height: 100%;
+      background: white;
+      margin-top: 12vh;
+      border-radius: 20px;
+      .step1-header {
+        margin-top: 2rem;
+      }
+      .step1-button-wrapper {
+        width: 90%;
+        height: 80px;
+      }
+    }
+    .step2 {
+      position: relative;
+      width: 90%;
+      height: 100%;
+      background: white;
+      margin-top: 12vh;
+      border-radius: 20px;
+      .step2-plan-wrapper {
+        flex-direction: column;
+        .step2-plan {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          height: 80px;
+          img {
+            margin: 10px;
+          }
+        }
+      }
+      .step2-billing {
+        margin-top: 20px;
+      }
+    }
+  }
+  .step3 {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: white;
+    margin-top: 12vh;
+    border-radius: 20px;
+    .step3-header {
+      margin-bottom: 2rem;
+    }
+    .step3-addons-wrapper {
+      .step3-addon {
+        padding: 1rem;
+        .step3-addon-left {
+          gap: 1rem;
+
+          .step3-description {
+            h2 {
+              font-size: 1rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .step-4 {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: white;
+    margin-top: 12vh;
+    border-radius: 20px;
+  }
+  .step5 {
+    position: relative;
+    padding: 2rem 0 2rem 0;
+    width: 90%;
+    height: 100%;
+    background: white;
+    margin-top: 12vh;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100vw;
+    .sidebar {
+      width: 100vw;
+    }
+  }
+}

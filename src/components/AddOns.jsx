@@ -89,9 +89,9 @@ function AddOn({ header, desc, price, addOnID, text }) {
     });
     return (
         <button type="button" className={`${className}`} onClick={() => handleClick(header, price)} ref={divRef}>
-            <div className="step3-addon-right">
+            <div className="step3-addon-left">
                 <input type="checkbox" ref={checkBoxRef} style={{ cursor: "pointer" }} />
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <div className="step3-description">
                     <h2>{header}</h2>
                     <p>{desc}</p>
                 </div>

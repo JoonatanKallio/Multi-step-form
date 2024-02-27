@@ -135,7 +135,7 @@ export default function SelectPlan() {
     );
 }
 
-function MonthlyPlan({planIcon, planName, planPrice, info, setInfo }) {
+function MonthlyPlan({ planIcon, planName, planPrice, info, setInfo }) {
     function handleClick() {
         setInfo({ ...info, plan: planPrice, pName: planName, billing: "Monthly" });
     }
@@ -163,7 +163,7 @@ function YearlyPlan({ planIcon, planName, planPrice, info, setInfo }) {
 
     const className = info.plan === planPrice ? "step2-plan selected" : "step2-plan";
     return (
-        <button type="button" className={`${className}`} onClick={handleClick} style={{ height: "190px" }}>
+        <button type="button" className={`${className}`} onClick={handleClick} >
             <img src={planIcon} alt="Plan icon" />
             <div>
                 <h2>{planName}</h2>

@@ -2,12 +2,12 @@
 
 #root{
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background: $magnolia;
 }
-
 .button-wrapper {
   width: 75%;
   height: 110px;
@@ -46,7 +46,6 @@
   font-weight: 500;
   cursor: pointer;
 }
-
 .wrapper {
   background: $white;
   display: flex;
@@ -55,7 +54,6 @@
   padding: 15px;
   border-radius: 20px;
   height: 568px;
-
   .sidebar {
     position: relative;
     .sidebar-button-wrapper {
@@ -101,7 +99,6 @@
       }
     }
   }
-
   .step1 {
     width: 620px;
     height: 100%;
@@ -161,7 +158,6 @@
     }
   }
 }
-
 .step2 {
   width: 620px;
   height: 100%;
@@ -255,7 +251,6 @@
     align-items: end;
   }
 }
-
 .step3 {
   width: 620px;
   height: 100%;
@@ -277,7 +272,6 @@
       color: $coolGray
     }
   }
-
   .step3-addons-wrapper {
     width: 75%;
     display: flex;
@@ -296,14 +290,17 @@
       &.selected {
         background-color: $magnolia;
       }
-      .step3-addon-right {
+      .step3-addon-left {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        div {
+        .step3-description {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           h2 {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: $marineBlue;
           }
           p {
@@ -424,7 +421,6 @@
       }
     }
   }
-
 }
 
 .step5 {
@@ -456,3 +452,5 @@
     }
   }
 }
+
+@import "./_media.scss";
